@@ -10,6 +10,7 @@ body {
 	color: white;
 	padding: 20px 16px;
 	text-decoration: none;
+	user-select: none;
 }
 .nm a:hover {
 	background-color: white;
@@ -17,6 +18,5 @@ body {
 }
 .nm a.act {
 	background-color: black;
-	user-select: none;
 	color: white;
 }
