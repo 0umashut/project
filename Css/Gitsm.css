@@ -1,83 +1,109 @@
 body {
+	margin: auto;
+	width: 70%;
 	display: grid;
 	grid-template-areas:
 		"nav nav nav"
-		"search . logo"
+		"searcharea . logo"
 		"aside section section"
 		"footer footer footer";
-	grid-gap: 1%;
-	grid-template-columns: 30% 38% 30%;
+	grid-row-gap: 1%;
+	grid-column-gap: 3%;
+	grid-template-columns: 26% 38% 30%;
 	grid-template-rows: 58px 50px 600px 100px;
 	text-decoration: none;
 }
 
 /* main grid areas */
 
-section#search {
-	grid-area: search;
+.searcharea {
+	grid-area: searcharea;
 	background-color: green;
 }
-section#logo {
+.logo {
 	grid-area: logo;
 	background-color: red;
 }
 aside {
+	display: grid;
+	padding: 4% 2%;
+	grid-template-areas:
+	"a1"
+	"a2"
+	"a3"
+	"a4";
+	grid-template-columns: 100%;
+	grid-gap: 2%;
 	grid-area: aside;
 	background-color: gray;
 }
 section {
 	display: grid;
-	grid-template-areas: 
-	"s1 s2 s3"
-	"s4 s5 s6"
-	"s7 s8 s9";
-	grid-gap: 1%;
+	padding: 2%;
+	grid-template-areas:
+	"s1"
+	"s2"
+	"s3";
+	grid-template-columns: 100%;
+	grid-row-gap: 2%;
 	grid-area: section;
 	background-color: gray;
 }
 footer {
 	grid-area: footer;
 	background-color: black;
+	padding-bottom: 2%;
 }
 nav {
 	grid-area: nav;
-	grid-column 1 / 3;
+	grid-column: 1 / 4;
 }
+
+/* search */
+
+.search {
+	background-color: white;
+	border: 2px solid black;
+}
+
+/* aside grid area */
+
+.a1 {
+	grid-area: a1;
+	background-color: white;
+}
+.a2 {
+	background-color: white;
+	grid-area: a2;
+}
+.a3 {
+	background-color: white;
+	grid-area: a3;
+}
+.a4 {
+	background-color: white;
+	grid-area: a4;
+}
+
 
 /* section grid area */
 
 .s1 {
+	background-color: white;
 	grid-area: s1;
 }
 .s2 {
+	background-color: white;
 	grid-area: s2;
 }
 .s3 {
+	background-color: white;
 	grid-area: s3;
-}
-.s4 {
-	grid-area: s4;
-}
-.s5 {
-	grid-area: s5;
-}
-.s6 {
-	grid-area: s6;
-}
-.s7 {
-	grid-area: s7;
-}
-.s8 {
-	grid-area: s8;
-}
-.s9 {
-	grid-area: s9;
 }
 
 /* nav menu */
-
 .nm {
-	overflow: hidden;
+	margin: auto;
 }
 .nm a {
 	float: left;
@@ -94,10 +120,4 @@ nav {
 .nm a.act {
 	background-color: black;
 	color: white;
-}
-
-/* searchbar */
-
-.search {
-	background-color: white;
 }
