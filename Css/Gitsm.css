@@ -1,5 +1,35 @@
 body {
+	display: grid;
+	grid-template-areas: 
+		"nav nav nav"
+		"search . logo"
+		"aside section section"
+		"footer footer footer";
 	text-decoration: none;
+}
+
+/* grid areas */
+
+section#search {
+	grid-area: search;
+}
+section#logo {
+	grid-area: logo;
+}
+aside {
+	grid-area: aside;
+}
+section {
+	grid-area: section;
+}
+footer {
+	grid-area: footer;
+}
+
+/* nav menu */
+
+nav {
+	grid-area: "nav";
 }
 .nm {
 	overflow: hidden;
