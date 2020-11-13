@@ -4,7 +4,7 @@ body {
 	margin: 0px;
 	display: grid;
 	grid-template-areas:
-		"nav"
+		"unchmenu"
 		"subbody";
 	grid-row-gap: 1%;
 	text-decoration: none;
@@ -12,8 +12,15 @@ body {
 
 /* main grid elements */
 
-nav {
-	grid-area: nav;
+.unchmenu {
+	margin: none;
+	display: grid;
+	grid-area: unchmenu;
+	grid-template-areas: 
+	"nav nav nav nav nav"
+	". searcharea . logo .";
+	grid-row-gap: 5%;
+	grid-template-columns: 20% 20% 30% 10% 20%;
 }
 
 .subbody {
@@ -22,13 +29,12 @@ nav {
 	width: 60%;
 	display: grid;
 	grid-template-areas:
-		"searcharea . logo"
 		"aside section section"
 		"footer footer footer";
 	grid-row-gap: 1%;
 	grid-column-gap: 3%;
 	grid-template-columns: 26% 38% 30%;
-	grid-template-rows: 50px 600px 100px;
+	grid-template-rows: 600px 100px;
 }
 
 /* subbody grid elements */
@@ -41,10 +47,7 @@ nav {
 	background-color: white;
 }
 
-.logo {
-	max-height: 100%;
-	width: 36%;
-	margin: 0% 40%;
+.logo {	
 	grid-area: logo;
 }
 
@@ -139,6 +142,7 @@ footer {
 /* nav menu */
 
 .nm {
+	grid-area: nav;
 	top: 0px;
 	position: sticky;
 	margin: auto;
