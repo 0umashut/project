@@ -1,23 +1,25 @@
+/* body */
+
 body {
+	margin: 0px;
 	display: grid;
 	grid-template-areas:
-		"menubody"
+		"nav"
 		"subbody";
 	grid-row-gap: 1%;
 	text-decoration: none;
 }
 
-.menubody {
-	grid-area: menubody;
-	margin: auto;
-	display: grid;
-	grid-template-areas:
-		"nav";
+/* main grid elements */
+
+nav {
+	grid-area: nav;
 }
+
 .subbody {
 	grid-area: subbody;
 	margin: auto;
-	width: 70%;
+	width: 60%;
 	display: grid;
 	grid-template-areas:
 		"searcharea . logo"
@@ -29,16 +31,24 @@ body {
 	grid-template-rows: 50px 600px 100px;
 }
 
-/* main grid areas */
+
+
+/* subbody grid elements */
 
 .searcharea {
+	margin: auto;
+	width: 60%;
 	grid-area: searcharea;
-	background-color: green;
+	text-align: center;
+	background-color: white;
 }
+
 .logo {
+	width:90%;
 	grid-area: logo;
 	background-color: red;
 }
+
 aside {
 	display: grid;
 	padding: 4% 2%;
@@ -52,6 +62,7 @@ aside {
 	grid-area: aside;
 	background-color: gray;
 }
+
 section {
 	display: grid;
 	padding: 2%;
@@ -64,23 +75,21 @@ section {
 	grid-area: section;
 	background-color: gray;
 }
+
 footer {
 	grid-area: footer;
 	background-color: black;
-	padding-bottom: 2%;
-}
-nav {
-	grid-area: nav;
 }
 
-/* search */
+/* logo */
 
-.search {
-	background-color: white;
-	border: 2px solid black;
+img {
+	max-width: 100%;
+	height: 100%;
+	pointer-events: none;
 }
 
-/* aside grid area */
+/* aside grid elements */
 
 .a1 {
 	grid-area: a1;
@@ -100,7 +109,7 @@ nav {
 }
 
 
-/* section grid area */
+/* section grid elements */
 
 .s1 {
 	background-color: white;
@@ -116,24 +125,36 @@ nav {
 }
 
 /* nav menu */
+
 .nm {
+	top: 0px;
+	position: sticky;
 	margin: auto;
 	display: grid;
-	grid-template-areas: ". m1 m2 m3 m4 m5 ."
+	width: 100%;
+	background-color: red;
+	grid-template-areas: ". m1 m2 m3 m4 m5 .";
+	grid-template-columns: 30% 8% 8% 8% 8% 8% 30%;
 }
+
 .nm a {
 	float: left;
 	background-color: red;
 	color: white;
-	padding: 100% 100%;
 	text-decoration: none;
 	user-select: none;
-	max-height: 54px;
+	text-align: center;
+	padding-top: 10%;
+	padding-bottom: 10%;
 }
+
 .nm a:hover {
 	background-color: white;
 	color: black;
 }
+
+/* nav menu grid elements */
+
 .nm a.act {
 	background-color: black;
 	color: white;
