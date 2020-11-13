@@ -1,17 +1,32 @@
 body {
+	display: grid;
+	grid-template-areas:
+		"menubody"
+		"subbody";
+	grid-row-gap: 1%;
+	text-decoration: none;
+}
+
+.menubody {
+	grid-area: menubody;
+	margin: auto;
+	display: grid;
+	grid-template-areas:
+		"nav";
+}
+.subbody {
+	grid-area: subbody;
 	margin: auto;
 	width: 70%;
 	display: grid;
 	grid-template-areas:
-		"nav nav nav"
 		"searcharea . logo"
 		"aside section section"
 		"footer footer footer";
 	grid-row-gap: 1%;
 	grid-column-gap: 3%;
 	grid-template-columns: 26% 38% 30%;
-	grid-template-rows: 58px 50px 600px 100px;
-	text-decoration: none;
+	grid-template-rows: 50px 600px 100px;
 }
 
 /* main grid areas */
@@ -56,7 +71,6 @@ footer {
 }
 nav {
 	grid-area: nav;
-	grid-column: 1 / 4;
 }
 
 /* search */
@@ -104,14 +118,17 @@ nav {
 /* nav menu */
 .nm {
 	margin: auto;
+	display: grid;
+	grid-template-areas: ". m1 m2 m3 m4 m5 ."
 }
 .nm a {
 	float: left;
 	background-color: red;
 	color: white;
-	padding: 20px 16px;
+	padding: 100% 100%;
 	text-decoration: none;
 	user-select: none;
+	max-height: 54px;
 }
 .nm a:hover {
 	background-color: white;
@@ -120,4 +137,19 @@ nav {
 .nm a.act {
 	background-color: black;
 	color: white;
+}
+.nm a#m1 {
+	grid-area: m1;
+}
+.nm a#m2 {
+	grid-area: m2;
+}
+.nm a#m3 {
+	grid-area: m3;
+}
+.nm a#m4 {
+	grid-area: m4;
+}
+.nm a#m5 {
+	grid-area: m5;
 }
