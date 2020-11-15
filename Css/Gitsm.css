@@ -2,6 +2,7 @@
 
 * {
 	text-decoration: none;
+	user-select: none;
 }
 
 p {
@@ -51,7 +52,6 @@ body {
 	background-color: red;
 	color: white;
 	text-decoration: none;
-	user-select: none;
 	text-align: center;
 	padding-top: 10%;
 	padding-bottom: 10%;
