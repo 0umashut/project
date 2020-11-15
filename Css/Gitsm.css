@@ -228,13 +228,26 @@ section a:hover {
 
 /* ----newsart grid elements---- */
 
-#image {
-	padding: 1%;
+.image {
 	grid-area: image;
 	width: 98%;
 	height: 97%;
 	border-radius: 15px;
+	margin: 1%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
+
+#i1 {
+	background-image: url(../images/ezh2.jpg);
+}
+#i2 {
+	background-image: url(../images/ezh1.jpg);
+}
+#i3 {
+	background-image: url(../images/ezh.jpg);
+}
+
 
 #ntext {
 	grid-area: ntext;
