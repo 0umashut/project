@@ -20,49 +20,76 @@ header {
 }
 
 img {
-	max-width: 100%;
-	max-height: 100%;
+	margin: 5px;
+	height: 41px;
+	width: 90px; 
 }
 
 /* body */
 
 body {
-	margin: 0px;
+	margin: 0;
 	display: grid;
 	grid-template-areas:
 		"nav"
-		"searcharea"
 		"subbody";
-	grid-row-gap: 1% 0%;
+	grid-row-gap: 1% 0;
 	background-image: url(../images/bg.jpg);
 	background-repeat: no-repeat;
 }
 
 /* -nav menu- */
 
-.nm {
+.menu {
 	grid-area: nav;
-	top: 0px;
+	top: 0;
 	position: sticky;
-	margin: auto;
 	display: grid;
-	width: 100%;
 	background-color: red;
-	grid-template-areas: ". m1 m2 m3 m4 m5 .";
-	grid-template-columns: 30% 8% 8% 8% 8% 8% 30%;
+	grid-template-areas: "search nm logo";
+	grid-template-columns: 2fr 5fr 2fr;
+	height: 50px;
 }
 
 /* --nav menu grid elements-- */
 
+.logo {
+	grid-area: logo;
+	height: 50px;
+}
+
+.logo>a {
+	height: 50px;
+	width: 330px;
+}
+
+.search {
+	grid-area: search;
+	margin: 15px 0 0 150px;
+}
+
+.nm {
+	grid-area: nm;
+	margin: auto;
+	display: grid;
+	width: 100%;
+	background-color: red;
+	grid-template-areas: "m1 m2 m3 m4 m5";
+	grid-template-columns: repeat(5, 1fr);
+	height: 50px;
+	text-align: center;
+}
+
+/* --nm grid elements-- */
+
 .nm a {
+	padding-top: 15px;
 	float: left;
+	height: 35px;
 	background-color: red;
 	color: white;
-	text-decoration: none;
+	text-decoration: none; 
 	text-align: center;
-	padding-top: 10%;
-	padding-bottom: 10%;
-	width: 100%;
 }
 
 .nm a:hover {
@@ -90,32 +117,6 @@ body {
 	grid-area: m5;
 }
 
-/* -searcgarea- */
-
-.searcharea {
-	margin: auto;
-	width: 60%;
-	grid-area: searcharea;
-	display: grid;
-	grid-template-areas: 
-	"search . logo .";
-	grid-template-columns: 20% 50% 20% 10%;
-	padding:1% 1% 0% 1%;
-	background-color: white;
-}
-
-/* --searcharea grid elements-- */
-
-.logo {
-	grid-area: logo;
-}
-
-.search {
-	grid-area: search;
-	align-self: center;
-	padding-left: 25%;
-}
-
 /* -subbody- */
 
 .subbody {
@@ -137,6 +138,7 @@ body {
 /* --aside--*/
 
 aside {
+	border-radius: 15px;
 	display: grid;
 	padding: 4% 2%;
 	grid-template-areas:
@@ -148,7 +150,11 @@ aside {
 	grid-gap: 2%;
 	grid-template-rows: 23.5% 23.5% 23.5% 23.5%;
 	grid-area: aside;
-	background-color: gray;
+	background-color: lightgray;
+}
+
+aside a {
+	border-radius: 10px;
 }
 
 aside a:hover{
@@ -183,6 +189,7 @@ aside a:hover{
 /* --section-- */
 
 section {
+	border-radius: 15px;
 	display: grid;
 	padding: 2%;
 	grid-template-areas:
@@ -193,7 +200,11 @@ section {
 	grid-template-rows: 32% 32% 32%;
 	grid-row-gap: 2%;
 	grid-area: section;
-	background-color: gray;
+	background-color: lightgray;
+}
+
+section a {
+	border-radius: 15px;
 }
 
 /* ---section grid elements--- */
@@ -215,15 +226,12 @@ section a:hover {
 
 #s1 {
 	grid-area: s1;
-
 }
 #s2 {
 	grid-area: s2;
-
 }
 #s3 {
 	grid-area: s3;
-
 }
 
 /* ----newsart grid elements---- */
@@ -258,6 +266,7 @@ section a:hover {
 /* --footer--*/
 
 footer {
+	border-radius: 15px 15px 0 0;
 	grid-area: footer;
 	background-color: black;
 	width: 100%;
@@ -267,4 +276,41 @@ footer {
 footer>p {
 	color: white;
 	padding: 3% 20% 0% 20%;
+}
+
+@media screen and (max-width: 1500px){
+	.subbody{
+		width: 75%;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	.subbody{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.subbody{
+		padding: 0;
+		width: 100%;
+		grid-template-areas: 
+		"aside"
+		"section"
+		"footer";
+		grid-template-columns: 1fr;
+		grid-gap: 
+	}
+	aside {
+		margin: auto;
+	}
+	aside a {
+		width: auto;
+		height: auto;
+		margin-bottom: 15px;
+	}
+	.creator-article {
+		width: 1fr;
+		height: 1fr;
+	}
 }
