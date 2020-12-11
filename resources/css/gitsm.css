@@ -3,6 +3,7 @@
 * {
 	text-decoration: none;
 	user-select: none;
+	color: black;
 }
 
 p {
@@ -167,7 +168,7 @@ section a {
 
 /* ---section grid elements--- */
 
-.news-article-short {
+.anime {
 	background-color: white;
 	width: 1fr;
 	height: 1fr;
@@ -308,5 +309,65 @@ aside#comm{
 
 .commas{
 	background-color: lightgrey;
+	border-radius: 15px;
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	padding: 2%;
+	grid-gap: 2%;
+}
 
+.commas>a{
+	background-color: white;
+	border-radius: 15px;
+	text-align: center;
+}
+
+.personmain{
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1%;
+}
+
+.person{
+	background-color: white;
+	display: grid;
+	grid-template-areas: 
+	"imga pp"
+	". pp";
+	grid-template-rows: 75px auto;
+}
+
+.person>.imga{
+	width: 65px;
+	height: 65px;
+	grid-area: imga;
+}
+
+.person>p{
+	grid-area: pp;
+}
+
+/* -------------contacts------------- */
+
+.contsmain{
+	grid-area: subbody;
+	margin: auto;
+	width: 60%;
+	display: grid;
+	grid-template-areas: 
+	"conts"
+	"footer";
+	grid-row-gap: 1%;
+	grid-template-rows: 600px 100px;
+	background-color: white;
+	padding: 1% 1% 0.5% 1%;
+}
+
+.conts{
+	grid-area: conts;
+	border-radius: 15px;
+	display: grid;
+	padding: 2%;
+	background-color: lightgray;
 }
