@@ -342,6 +342,7 @@ aside#comm{
 	width: 65px;
 	height: 65px;
 	grid-area: imga;
+	border-radius: 15px;
 }
 
 .person>p{
